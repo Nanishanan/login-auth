@@ -10,5 +10,9 @@ app.use(bodyParser.json());
 
 app.use('/user', userRouter);
 
+app.get('/', (req, res)=>{
+    res.send("Hi World!!");
+});
+
 const port = process.env.port || 3000;
 app.listen(port);
